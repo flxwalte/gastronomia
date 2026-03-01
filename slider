@@ -1,0 +1,50 @@
+<div class="slider-container">
+
+  <div class="slidercentral"> 
+     <div class="slide"> 
+       <img src="imagen1.jpg" alt="Imagen 1"> 
+       <div class="slide-content"> 
+       <h2>Título 1</h2> 
+       <p>Texto descriptivo 1.</p> 
+     </div>
+
+     <div class="slide">
+       <img src="imagen2.jpg" alt="Imagen 2">
+       <div class="slide-content">
+       <h2>Título 2</h2>
+       <p>Texto descriptivo 2.</p>
+      </div>
+    
+     <div class="slide">
+       <img src="imagen3.jpg" alt="Imagen 3">
+       <div class="slide-content">
+       <h2>Título 3</h2>
+       <p>Texto descriptivo 3.</p>
+     </div>
+    
+     <div class="slide">
+       <img src="imagen4.jpg" alt="Imagen 4">
+       <div class="slide-content">
+       <h2>Título 4</h2>
+       <p>Texto descriptivo 4.</p>
+     </div>
+
+     <div class="slide">
+      <img src="imagen5.jpg" alt="Imagen 5">
+      <div class="slide-content">
+      <h2>Título 5</h2>
+      <p>Texto descriptivo 5.</p>
+     </div>
+
+     <div class="slide">
+      <img src="imagen6.jpg" alt="Imagen 6">
+      <div class="slide-content">
+      <h2>Título 6</h2>
+      <p>Texto descriptivo 6.</p>
+     </div>
+
+  <div class="slider-controls"> 
+   <button class="prev-button">Anterior</button> 
+   <button class="next-button">Siguiente</button> 
+  </div>
+</div>

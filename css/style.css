@@ -1,0 +1,320 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- Header (Cabecera) --- */
+
+header {
+    background-image: url("img/fc.JPG");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- Logo --- */.logo-container {
+    width: auto;
+    max-width: 200px;
+    margin-right: 0;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Botones (menuinicio) --- */
+
+.menuinicio {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    order: 2;
+}
+
+/* --- Estilos de los Botones (Comunes) --- */
+
+.binicio,.menur,.gastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos de los Botones (Individuales) --- */
+
+.areauser {
+    
+}
+.binicio {
+    background-color: white;
+    color: black;
+}
+.menur {
+    background-color: white;
+    color: black;
+}
+.gastro {
+    background-color: white;
+    color: black;
+}
+
+/* --- Hover de los Botones --- */
+
+.binicio:hover,.menur:hover,.gastro:hover,
+#bacceso:hover {
+    transform: scale(1.1);
+}
+
+/* --- Botón "Pida Ya" --- */
+
+.areauser {
+	position: relative;
+	position: relative;
+	left: -18%;
+}
+
+#bacceso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: none;
+    border-bottom: 4px solid black;
+    border-right: 2px solid black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    height: 30%;
+}
+
+.button-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    order: 3;
+};
+
+/* Estilos para la ventana emergente */
+#miVentana {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Asegurar que esté encima de otros elementos */
+    padding: 5%;
+    width: 80%;
+    max-width: 800xp;
+    height: auto;
+    max-height: auto;
+}
+
+
+.ventana-contenido {
+    background-image: url('img/nota.JPG')
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: beige;
+    opacity: 0.95;
+    padding: 10%;
+    overflow-y: auto; /* Agrega una barra de desplazamiento si el contenido es muy largo */
+    width: 90%;
+    height: auto;
+    max-height: 80vh; /* Ajusta la altura máxima según tus necesidades */
+}
+
+.categoria {
+    border-radius: 30xp;
+    margin-top: 10px; /* Espacio de 10px encima de cada elemento */
+    justify-content: center;
+    margin-bottom: 200px; /* Espacio entre categorías */
+}
+
+.categoria h3 {
+    margin-bottom: 2px; /* Espacio debajo de los títulos de categorías */
+}
+
+.items {
+    display: flex; /* Organiza ítems horizontalmente */
+    justify-content: space-around;
+    gap: 10px; /* Espacio entre ítems */
+}
+
+.item {
+    padding: 10px;
+    text-align: center;
+    width: 100px; /* Ancho de cada ítem */
+    height: 100px; /* Altura de cada ítem */
+    box-sizing: border-box;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+
+/* --- CARRUSEL --- */
+main {
+    display: block; /* Asegura que main se comporte como un elemento de bloque */
+}
+
+.carousel-container {
+    width: 100%; /* Ancho deseado del carrusel */
+    margin: 10px auto 20px; /* Margen superior para la cabecera, otros márgenes para centrar */
+    position: relative; /* Asegura que el contenedor se posicione correctamente */
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Ajusta esto según el tamaño de tu contenedor */
+  position: relative;
+}
+
+.carousel-item {
+  display: none;
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+
+
+footer {
+  width: 100%;
+  background-color: beige;
+  color: black;
+  padding: 2px;
+}
+
+.footer-container {
+  display: flex; /* Usamos flexbox para distribuir las secciones */
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%; /* Ancho máximo del contenedor (opcional) */
+  text-align: center;
+  padding: 20xp;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas */
+}
+
+.footer-section {
+    flex: 1; /* Distribuye el espacio equitativamente */
+    margin: 20px; /* Espacio entre secciones */
+}
+
+.contacto {
+    margin: 20px
+}
+
+.legal {
+    margin: 20px
+}
+
+.social {
+    margin: 20px
+}
+
+.social-icons {
+  margin: 20px
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Media query para pantallas pequeñas (opcional) */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Apila las secciones verticalmente */
+    align-items: center; /* Centra las secciones horizontalmente */
+  }
+
+  .footer-section {
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio entre secciones en pantallas pequeñas */
+  }
+  
+  .binicio,.menur,.gastro,#bacceso {
+    font-size: 1.2rem;
+    padding: 0.6;
+  }
+
+}

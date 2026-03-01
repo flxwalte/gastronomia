@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía - Danalej Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <button id="abrirCarrito">Carrito</button>
+
+<div id="carritoFlotante">
+    <div id="contenidoCarrito">
+        <h2>Carrito de Compra</h2>
+        <div id="listaCarrito">
+            </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+</div>
+        <div class="header-content">
+           <div class="logo-container">
+                <img src="img/logo.png" alt="El sabor de venezuela" width="300" height="300" class="logo">
+            </div>
+            <div class="title-container">
+                <h1>Sabor Venezolano</h1>
+            </div>
+
+            <nav class="menuinicio">
+                <button type="button" class="binicio" onclick="redirigirInicio()">Restaurant</button>
+                <button type="button" class="menur" onclick="redirigirMenu()">Menu</button>
+                <button type="button" class="gastro" onclick="redirigirGastronomia()">>Gastronomia</button>
+            </nav>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>  <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="button-container">
+                <button id="bacceso">!Pida Ya¡</button>
+            </div>
+        </div>
+        <div class="popup-container"></div>
+    </header>
+
+    <main>
+        <article>
+            <h2>Gastronomía Venezolana</h2>
+            <p>La gastronomía de Venezuela es una mezcla de influencias indígenas, africanas y europeas, lo que la convierte en una cocina rica y variada. Algunos de los platos más emblemáticos son la arepa, la hallaca, el pabellón criollo y el sancocho.</p>
+            <p>La arepa, una especie de pan de maíz, es un alimento básico en la dieta venezolana y se puede rellenar con una gran variedad de ingredientes. La hallaca, un plato navideño, es una masa de maíz rellena de carne, pollo, cerdo, aceitunas, pasas y alcaparras, envuelta en hojas de plátano. El pabellón criollo, considerado el plato nacional, es un plato abundante que combina arroz blanco, carne mechada, frijoles negros y plátano maduro frito. El sancocho, una sopa sustanciosa, es un plato popular que varía según la región y los ingredientes disponibles.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023</p>
+    </footer>
+
+    <script src="java/java.js"></script>
+</body>
+</html>

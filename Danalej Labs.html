@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danalej Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <video width="1260" height="324" autoplay muted loop playsinline>
+                <source src="video/sabor criollo2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="img/logo.gif" alt="El sabor de venezuela" width="300" height="300" class="logo">
+            </div>
+
+            <nav class="menuinicio">
+                <button type="button" class="binicio" onclick="redirigirInicio()">Restaurant</button>
+                <button type="button" class="menur" onclick="redirigirMenu()">Menu</button>
+                <button type="button" class="gastro" onclick="redirigirGastronomia()">Gastronomia</button>
+            </nav>
+            <nav class="areauser">
+                <button id="bacceso">¡Pida Ya!</button>
+                <div id="miVentana" style="display: none;"> 
+                    <div class="ventana-contenido" id="bandeja">
+                        <h2>Bandeja de Servicio</h2>
+                        <div class="categoria">
+                            <h3>Snacks</h3>
+                            <div class="items">
+                                <!-- Añadir más items aquí -->
+                                <div class="item">
+                                    <img src="img/s1.png" alt="Mini arepas">
+                                    <h4>Minis Arepitas</h4>
+                                    <p>Precio: $1.50</p>
+                                    <input type="checkbox" class="check-item" data-precio="1.50">
+                                </div>
+                                <div class="item">
+                                    <img src="img/s2.png" alt="Tajadas">
+                                    <h4>Tajaditas Fritas</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/s3.png" alt="Tequeños">
+                                    <h4>Mini Tequeños</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/s4.png" alt="Mini Empanadas">
+                                    <h4>Mini Empanaditas</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/s5.png" alt="KIT variedad">
+                                    <h4>Kit Variedades</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <h3>Platos Fuertes</h3>
+                            <div class="items">
+                                <!-- Añadir más items aquí -->
+                                <div class="item">
+                                    <img src="img/p1.png" alt="Pabellon Criollo">
+                                    <h4>Pabellon Criollo</h4>
+                                    <p>Precio: $1.50</p>
+                                    <input type="checkbox" class="check-item" data-precio="1.50">
+                                </div>
+                                <div class="item">
+                                    <img src="img/p2.png" alt="Pastel de Chucho">
+                                    <h4>Pastel Chucho</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/p3.png" alt="Asado Negro">
+                                    <h4>Asado Negro</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/p4.png" alt="Plato navideño">
+                                    <h4>Plato Navideño</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/p5.png" alt="Arroz Chino Venezolano">
+                                    <h4>Arros Chino</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <h3>Arepas</h3>
+                            <div class="items">
+                                <!-- Añadir más items aquí -->
+                                <div class="item">
+                                    <img src="img/a1.png" alt="Arepa de Pabellon">
+                                    <h4>Arepa Pabellon</h4>
+                                    <p>Precio: $1.50</p>
+                                    <input type="checkbox" class="check-item" data-precio="1.50">
+                                </div>
+                                <div class="item">
+                                    <img src="img/a2.png" alt="Arepa Sifrina">
+                                    <h4>Arepa Sifrina</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/a3.png" alt="Reina Pepiada">
+                                    <h4>Reina Pepiada</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/a4.png" alt="Arepa Pelua">
+                                    <h4>Arepa Pelua</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/a5.png" alt="Arepa de Perico">
+                                    <h4>Arepa Perico</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <h3>Empanadas</h3>
+                            <div class="items">
+                                <!-- Añadir más items aquí -->
+                                <div class="item">
+                                    <img src="img/e1.png" alt="Empanada de Queso">
+                                    <h4>Empanada Queso</h4>
+                                    <p>Precio: $1.50</p>
+                                    <input type="checkbox" class="check-item" data-precio="1.50">
+                                </div>
+                                <div class="item">
+                                    <img src="img/e2.png" alt="Empanada de Pollo">
+                                    <h4>Empanada Pollo</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/e3.png" alt="Empanada de Pabellon">
+                                    <h4>Empanada Pabellon</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/e4.png" alt="Empanada de Carne Mechada">
+                                    <h4>Carne Mechada</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/e5.png" alt="Empanada de Jamon y Queso">
+                                    <h4>Jamon y Queso</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <h3>Bebidas</h3>
+                            <div class="items">
+                                <!-- Añadir más items aquí -->
+                                <div class="item">
+                                    <img src="img/b1.png" alt="Papelon con Limon">
+                                    <h4>Papelon con Limon</h4>
+                                    <p>Precio: $1.50</p>
+                                    <input type="checkbox" class="check-item" data-precio="1.50">
+                                </div>
+                                <div class="item">
+                                    <img src="img/b2.png" alt="Chica de Arroz">
+                                    <h4>Chicha de Arroz</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/b3.png" alt="Refresco de Chinotto">
+                                    <h4>Refresco de Chinotto</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/b4.png" alt="Refresco de Colita">
+                                    <h4>Refresco Colita Golden</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                                <div class="item">
+                                    <img src="img/b5.png" alt="Malta Maltin Polar">
+                                    <h4>Malta Maltin Polar</h4>
+                                    <p>Precio: $2.00</p>
+                                    <input type="checkbox" class="check-item" data-precio="2.00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            Total: <span id="total-precio">0.00</span>
+                        </div>
+                        <button id="pedir-btn">Pedir</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="carousel-container">
+             <div class="carousel">
+                  <div class="carousel-item active">
+                     <img src="img/imagen 1.jpg" alt="Imagen 1">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="img/imagen 2.jpg" alt="Imagen 2">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="img/imagen 3.jpg" alt="Imagen 3">
+                  </div>
+                  <div class="carousel-control-prev">&lt;</div>
+                  <div class="carousel-control-next">&gt;</div>
+  
+             </div>
+             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+             </a>
+             <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+             </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        
+        <div class="footer-container">
+            <div>
+                 <img src="img/logo.gif" alt="El sabor de venezuela" width="250" height="300" class="pies">
+            </div>
+            <div class="footer-section contacto" width="250" height="300">
+                <h3>Contacto</h3>
+                <p>Producciones Danalej &copy; 2025</p>
+                <p>Correo: flxwalte@gmail.com</p>
+                <p>Teléfono: +34 631 15 65 30</p>
+            </div>
+            <div class="footer-section legal" width="250" height="300">
+                <h3>Legal</h3>
+                <a href="#">Aviso legal</a><br>
+                <a href="#">Política de privacidad</a><br>
+                <a href="#">Términos y condiciones</a>
+            </div>
+            <div class="footer-section social" width="250" height="300">
+                <h3>Redes sociales</h3>
+                   <div class="social-icons">
+                   <a href="https://www.facebook.com/" target="_blank"><img src="img/1.png" alt="Facebook"></a>
+                   <a href="https://www.instagram.com/" target="_blank"><img src="img/2.png" alt="Instagram"></a>
+                   <a href="https://twitter.com/" target="_blank"><img src="img/3.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="java/java.js"></script>
+</body>
+</html>
+

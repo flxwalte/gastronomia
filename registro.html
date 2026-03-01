@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Danalej Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="El sabor de venezuela" width="300" height="300" class="logo">
+            </div>
+            <div class="title-container">
+                <h1>Sabor Venezolano</h1>
+            </div>
+
+            <nav class="menuinicio">
+                <button type="button" class="binicio">Restaurant</button>
+                <button type="button" class="menur">Menu</button>
+                <button type="button" class="gastro">Gastronomia</button>
+            </nav>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>  <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="button-container">
+                <button id="bacceso">!Pida Ya¡</button>
+            </div>
+        </div>
+        <div class="popup-container"></div>
+    </header>
+
+    <main>
+        <article>
+            <h2>Registro de Cliente</h2>
+            <form id="registro-form">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023</p>
+    </footer>
+
+    <script>
+        document.getElementById('registro-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que se recargue la página
+
+            // Aquí puedes obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+
+            // Simular la asignación de un número de cliente (esto se haría en el servidor)
+            const numeroCliente = Math.floor(Math.random() * 10000) + 1; // Número aleatorio
+
+            // Mostrar mensaje de éxito con el número de cliente
+            Swal.fire({
+                title: 'Registro Exitoso',
+                text: `¡Gracias por registrarte, ${nombre}! Tu número de cliente es: ${numeroCliente}`,
+                icon: 'success'
+            });
+
+            // Restablecer el formulario (opcional)
+            document.getElementById('registro-form').reset();
+        });
+    </script>
+</body>
+</html>

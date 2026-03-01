@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Danalej Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <button id="abrirCarrito">Carrito</button>
+           <div id="carritoFlotante">
+           <div id="contenidoCarrito">
+           <h2>Carrito de Compra</h2>
+           <div id="listaCarrito">
+           </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+</div>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="El sabor de venezuela" width="300" height="300" class="logo">
+            </div>
+            <div class="title-container">
+                <h1>Sabor Venezolano</h1>
+            </div>
+
+            <nav class="menuinicio">
+                <button type="button" class="binicio" onclick="redirigirInicio()">Restaurant</button>
+                <button type="button" class="menur" onclick="redirigirMenu()">Menu</button>
+                <button type="button" class="gastro" onclick="redirigirGastronomia()">>Gastronomia</button>
+            </nav>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>  <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="button-container">
+                <button id="bacceso">!Pida Ya¡</button>
+            </div>
+        </div>
+        <div class="popup-container"></div>
+    </header>
+
+    <main>
+        <article>
+            <h2>Nuestro Menú</h2>
+
+            <div class="menu-item">
+                <h3>Arepa con Pernil</h3>
+                <p>Deliciosa arepa rellena de pernil horneado.</p>
+                <p class="price">$8</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <div class="menu-item">
+                <h3>Empanadas</h3>
+                <p>Variedad de empanadas con diferentes rellenos.</p>
+                <p class="price">$5</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <div class="menu-item">
+                <h3>Hallacas</h3>
+                <p>Plato navideño venezolano a base de masa de maíz rellena.</p>
+                <p class="price">$12</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+
+            </article>
+    </main>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023</p>
+    </footer>
+
+    <script src="java/java.js"></script>
+</body>
+</html>
